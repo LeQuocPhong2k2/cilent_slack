@@ -9,17 +9,26 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: rgb(15 23 42);
+  background: rgb(113 113 122);
   border-radius: 5px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(100 116 139);
+  background: rgb(113 113 122);
   border-radius: 5px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgb(100 116 139);
+  background: rgb(113 113 122);
+}
+.row-span-16 {
+  grid-row: span 16 / span 16;
+}
+.col-span-12 {
+  grid-column: span 12 / span 12;
+}
+.grid-rows-12 {
+  grid-template-rows: repeat(12, minmax(0, 1fr));
 }
