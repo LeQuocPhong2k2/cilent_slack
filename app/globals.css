@@ -2,33 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-/* width */
-::-webkit-scrollbar {
+width
+/* ::-webkit-scrollbar {
   width: 10px;
-}
+} */
 
 /* Track */
-::-webkit-scrollbar-track {
+/* ::-webkit-scrollbar-track {
   background: rgb(113 113 122);
   border-radius: 5px;
-}
+} */
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+/* ::-webkit-scrollbar-thumb {
   background: rgb(113 113 122);
   border-radius: 5px;
-}
+} */
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+/* ::-webkit-scrollbar-thumb:hover {
   background: rgb(113 113 122);
+} */
+
+.bg-clarity {
+  background: rgba(0, 0, 0, 0.2);
 }
-.row-span-16 {
-  grid-row: span 16 / span 16;
+
+.grid-20-80 {
+  display: grid;
+  grid-template-rows: 3rem auto;
 }
-.col-span-12 {
-  grid-column: span 12 / span 12;
+.grid-20-80-columns {
+  display: grid;
+  grid-template-columns: 15rem auto;
 }
-.grid-rows-12 {
-  grid-template-rows: repeat(12, minmax(0, 1fr));
+.grid-12-10-auto {
+  display: grid;
+  grid-template-rows: 75% auto;
+}
+.min-w-15rem {
+  min-width: 15rem;
+}
+
+.h-75pt {
+  height: 60%;
+}
+.h-25pt {
+  height: 25%;
+}
+.h-8pt {
+  height: 8%;
+}
+.h-92pt {
+  height: 80%;
+}
+.grid-99-auto {
+  display: grid;
+  grid-template-rows: 99% auto;
 }

@@ -1,17 +1,22 @@
 import { configureStore } from "@reduxjs/toolkit";
-import userReducer from "@/redux/slice/user-slice";
+import userReducer from "@/redux/slice/userSlice";
+import channelReducer from "@/redux/slice/channelSlice";
+import threadReducer from "@/redux/slice/threadSlice";
 import { TypedUseSelectorHook, useSelector,useDispatch } from "react-redux";
-import { userApi } from "./api/user-api";
+import { userApi } from "./api/userAPI";
+import { channelApi } from "./api/chanelAPI";
 
 export function makeStore() {
   return configureStore({
     reducer: {
       user: userReducer,
       [userApi.reducerPath]: userApi.reducer,
+      channels: channelReducer,
+      [channelApi.reducerPath]: channelApi.reducer,
+      threads: threadReducer,
     },
     middleware: (getDefaultMiddleware) =>
-      getDefaultMiddleware().concat(userApi.middleware),
-      
+      getDefaultMiddleware().concat(userApi.middleware,channelApi.middleware),
   });
 }
 

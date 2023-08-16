@@ -1,5 +1,5 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
-import { IUser } from '../slice/user-slice'
+import { IUser } from '../slice/userSlice'
 
 export const userApi = createApi({
     reducerPath: 'userApi',
@@ -14,5 +14,4 @@ export const userApi = createApi({
     }),
 })
 
-export const { useGetUserByIdQuery } = userApi
-export const { useGetAllUsersQuery } = userApi
+export const { useGetAllUsersQuery,useGetUserByIdQuery } = userApi
